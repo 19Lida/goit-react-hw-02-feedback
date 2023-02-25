@@ -3,23 +3,6 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Notification } from './Notification/Notification';
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
-
 export class App extends Component {
   state = {
     good: 0,
@@ -38,7 +21,7 @@ export class App extends Component {
       return 0;
     }
 
-    const result = ((this.state.good / total) * 100).toFixed(2);
+    const result = ((this.state.good / total) * 100).toFixed(1);
     return Number(result);
   }
   onLeaveFeedback = feedback => {
